@@ -8,5 +8,6 @@
   "theme.bar.menus.menu.network.scaling": 90,
   "theme.bar.menus.menu.volume.scaling": 85,
   "theme.bar.menus.menu.media.scaling": 95,
-  "theme.bar.menus.menu.dashboard.scaling": 70
+  "theme.bar.menus.menu.dashboard.scaling": 70,
+  "theme.font.size": "1.05rem"
 }
