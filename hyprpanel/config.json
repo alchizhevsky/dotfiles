@@ -1,0 +1,12 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.bar.menus.menu.clock.scaling": 80,
+  "theme.bar.menus.menu.battery.scaling": 90,
+  "theme.bar.menus.menu.bluetooth.scaling": 90,
+  "theme.bar.menus.menu.network.scaling": 90,
+  "theme.bar.menus.menu.volume.scaling": 85,
+  "theme.bar.menus.menu.media.scaling": 95,
+  "theme.bar.menus.menu.dashboard.scaling": 70
+}
