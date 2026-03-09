@@ -2,12 +2,75 @@
   "bar.customModules.storage.paths": [
     "/"
   ],
-  "theme.bar.menus.menu.clock.scaling": 80,
+  "theme.bar.menus.menu.clock.scaling": 69,
   "theme.bar.menus.menu.battery.scaling": 90,
   "theme.bar.menus.menu.bluetooth.scaling": 90,
   "theme.bar.menus.menu.network.scaling": 90,
   "theme.bar.menus.menu.volume.scaling": 85,
   "theme.bar.menus.menu.media.scaling": 95,
   "theme.bar.menus.menu.dashboard.scaling": 70,
-  "theme.font.size": "1.05rem"
+  "theme.font.size": "1.05rem",
+  "menus.clock.weather.enabled": false,
+  "menus.clock.time.military": true,
+  "menus.clock.time.hideSeconds": false,
+  "bar.network.label": false,
+  "bar.bluetooth.label": false,
+  "bar.battery.hideLabelWhenFull": false,
+  "bar.battery.label": true,
+  "theme.bar.buttons.systray.enableBorder": false,
+  "bar.clock.format": "%a %b %d  %H:%M",
+  "bar.clock.showIcon": true,
+  "bar.clock.showTime": true,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "bar.launcher.autoDetectIcon": false,
+  "bar.launcher.icon": ""
 }
