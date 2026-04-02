@@ -6,3 +6,5 @@ pager: false
 width: 80
 # show all files, including hidden and ignored.
 all: false
+#theme
+style: "/home/alex/.config/glow/themes/catppuccin-mocha.json"
