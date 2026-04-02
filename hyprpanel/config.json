@@ -9,7 +9,7 @@
   "theme.bar.menus.menu.volume.scaling": 85,
   "theme.bar.menus.menu.media.scaling": 95,
   "theme.bar.menus.menu.dashboard.scaling": 70,
-  "theme.font.size": "1.05rem",
+  "theme.font.size": "0.85rem",
   "menus.clock.weather.enabled": false,
   "menus.clock.time.military": true,
   "menus.clock.time.hideSeconds": false,
