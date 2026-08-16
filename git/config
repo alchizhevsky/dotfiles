@@ -1,0 +1,44 @@
+[user]
+	email = chizhevskii@rutoken.ru
+	name = Alexandr Chizhevskii
+[core]
+	editor = nvim
+	pager = delta
+	hooksPath = /home/alex/.config/git/hooks
+[merge]
+	tool = nvimdiff2
+[http]
+	postBuffer = 524288000
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
+[rebase]
+	autoStash = true
+[push]
+	default = simple
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[alias]
+	oops = commit --amend --no-edit
+	rmorig = !fd -H -t f \"\\.orig\" -X rm
+
+[include]
+    path = ~/.config/delta/catppuccin.gitconfig
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	features = catppuccin-mocha
+	navigate = true
+	light = false
+	; side-by-side = true # optional: enables side-by-side view by default
+[credential "https://scm.aktivco.ru"]
+	helper =
+	helper = !/usr/bin/glab auth git-credential
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

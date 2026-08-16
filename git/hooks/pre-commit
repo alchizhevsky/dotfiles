@@ -1,0 +1,19 @@
+#!/bin/bash
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if { [ "$BRANCH" = "master" ] || [ "$BRANCH" = "main" ]; } &&
+    [ "$(git config --local --bool --get hooks.allowMasterCommits)" != "true" ]; then
+    COLOR_ERROR=$(git config --get-color "" "bold red")
+    COLOR_SUGGEST=$(git config --get-color "" "yellow")
+    COLOR_RESET=$(git config --get-color "" "reset")
+
+    printf "${COLOR_ERROR}ERROR: Direct commits to local '${BRANCH}' are restricted!${COLOR_RESET}\n"
+    printf "Please create a feature branch instead:\n"
+    printf "  ${COLOR_SUGGEST}git switch -c feature/your-feature-name${COLOR_RESET}\n"
+    printf "If you absolutely must commit here, use:\n"
+    printf "  ${COLOR_SUGGEST}git commit --no-verify${COLOR_RESET}\n"
+    exit 1
+fi
+
+exit 0

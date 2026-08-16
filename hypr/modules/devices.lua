@@ -1,0 +1,5 @@
+hl.device({ name = "pandakb.com-sofle-rbg", kb_options = "grp:alt_space_toggle" })
+hl.device({ name = "pandakb.com-sofle-rbg-keyboard", kb_options = "grp:alt_space_toggle" })
+hl.device({ name = "pandakb.com-sofle-rbg-system-control", kb_options = "grp:alt_space_toggle" })
+hl.device({ name = "pandakb.com-sofle-rbg-consumer-control", kb_options = "grp:alt_space_toggle" })
+hl.device({ name = "epic-mouse-v1", sensitivity = -0.5 })

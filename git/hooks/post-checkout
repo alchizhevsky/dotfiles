@@ -1,0 +1,35 @@
+#!/bin/bash
+
+PREV_HEAD=$1
+NEW_HEAD=$2
+IS_BRANCH_CHECKOUT=$3
+
+# 1. Exit if this isn't a branch checkout or nothing changed
+if [ "$IS_BRANCH_CHECKOUT" -ne 1 ] || [ "$PREV_HEAD" = "$NEW_HEAD" ]; then
+    exit 0
+fi
+
+# 2. Exit if stdout is NOT a terminal (skips lazy.nvim, scripts, and automation)
+if [ ! -t 1 ]; then
+    exit 0
+fi
+
+# 3. Exit if we are already in a recursive block
+if [ "$ENV_BLOCK_CHECKOUT" = "true" ]; then
+    exit 0
+fi
+
+PARENT_CMD=$(ps -o command= -p $PPID 2>/dev/null || ps -p $PPID -o comm= 2>/dev/null)
+
+if [[ "$PARENT_CMD" == *"checkout"* ]]; then
+    COLOR_ERROR=$(git config --get-color "" "bold red")
+    COLOR_RESET=$(git config --get-color "" "reset")
+
+    printf "${COLOR_ERROR}ERROR: 'git checkout' is restricted. Use 'git switch' instead.${COLOR_RESET}\n"
+    printf "Reverting branch change...\n"
+
+    ENV_BLOCK_CHECKOUT=true git switch -q --detach "$PREV_HEAD"
+    exit 1
+fi
+
+exit 0
